@@ -15,7 +15,7 @@
                     <h5 class="card-title">TITOLO:{{$comic->title}}</h5>
                     <p class="card-text">TIPOLOGIA:{{$comic->type}}</p>
                     <p class="card-text">PREZZO:{{$comic->price}}</p>
-                    <a href="#" class="btn btn-primary">dettaglio prodotto</a>
+                    <a href="{{route('comics.show', $comic)}}" class="btn btn-primary">dettaglio prodotto</a>
                 </div>
             </div>
 
@@ -25,4 +25,4 @@
 
 </div>
 
-
+@endsection
