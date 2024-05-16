@@ -1,13 +1,15 @@
- prima vera interazione con il database utilizzando l’ORM di Laravel.
-1 - Create un nuovo progetto Laravel 9 (o clonate il template fatto in classe)
-2 - tramite **phpMyAdmin** create un nuovo database (scegliete liberamente il nome del DB)
-3 - Importate nel vostro database la tabella **movies** in allegato
-4 - inserite le vostre credenziali per il database nel file **.env** (se il progetto è stato clonato duplicate il file .env.exemple, lo rinominate in .env, generate la chiave e impostate le credenziali)
-5 - Create un model Movie
-**php artisan make:model Movie**
-6 - Create un controller che gestirà la rotta **/**
-**php artisan make:controller Guest/PageController**
-7 - All’interno della funzione **index()** del controller, recuperate tutti i film dal database e passateli alla view, che quindi li visualizzerà a schermo, tramite delle card.
-**BONUS:**
-8 - Create altre rotte filtrando i dati come preferite
-9 - Create una pagina di dettaglio. La pagina di dettaglio riceve dinamicamente l’ID del movie, esegue la query in base all’ID ricevuto e stampa il singolo elemento. Il link alla pagina di dettaglio sarà presente nell’elenco dei film
+CRUD TODO LIST
+1. clonare il template
+2. creare la migration
+3. creare il model
+4. popolare la tabella con il seeder (dall’array presente in config)
+5. creare il resource controller (php artisan make:controller --resource NomeController)
+6. creare le rotte resource (Route::resource('nome_tabella', MioResourceController::class);)
+7. relativamente alle rotte GET creare  le view in una cartella con il nome della tabella della CRUD e con il nome del metodo del resource controller relativo
+Per la navigazione
+- la rotta home è fuori dalla CRUD (se si s vuole si può stampatre il numero di card presenti)
+- elenco prodotti   (GET index)
+- dettaglio prodotto (GET show)
+- form nuovo prodotto (GET create) (ricordarsi il token @csrf)
+- rotta per salvare i dati provenienti dal form create (POST store)
+- una volta salvati i dati reindirizzare alla show (return redirect()->route('mia_tabella.show', $new_elemento);)
