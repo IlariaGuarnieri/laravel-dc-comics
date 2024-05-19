@@ -33,8 +33,9 @@ class ComicsController extends Controller
     public function store(Request $request)
     {
         $form_data = $request->all();
-        $new_comic = new Comic();
 
+        $new_comic = new Comic();
+        // istanza senza fillable
         // $new_comic->title = $form_data['title'];
         // $new_comic->description = $form_data['description'];
         // $new_comic->thumb = $form_data['thumb'];
@@ -46,7 +47,8 @@ class ComicsController extends Controller
         // $new_comic->writers = $form_data['writers'];
         // $new_comic->save();
 
-        // creo istanza con fillable
+        // creo istanza con fillable, riempi tutte le proprietà in automatico in base al fillable
+        // gli passo l'istanza $new_comic->fill e gli passo poi l'array $form_data con tutti i dati
         $new_comic->fill($form_data);
         $new_comic->save();
 

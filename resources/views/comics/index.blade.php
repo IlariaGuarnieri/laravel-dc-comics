@@ -16,6 +16,7 @@
                     <p class="card-text">TIPOLOGIA:{{$comic->type}}</p>
                     <p class="card-text">PREZZO:{{$comic->price}}</p>
                     <a href="{{route('comics.show', $comic)}}" class="btn btn-primary">Dettaglio prodotto</a>
+                    <a href="{{ route('comics.edit', $comic) }}" class="btn btn-warning "><i class="fa-solid fa-pencil"></i></a>
                 </div>
             </div>
 

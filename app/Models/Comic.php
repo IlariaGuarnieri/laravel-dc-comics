@@ -9,6 +9,7 @@ class Comic extends Model
 {
     use HasFactory;
 
+    //proprietà protetta fillable, serve per velocizzare, all'interno ho le stesse proprietà che ho nella migrations
     protected $fillable = [
         'title',
         'description',
