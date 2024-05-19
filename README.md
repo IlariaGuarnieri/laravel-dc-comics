@@ -13,3 +13,7 @@ Per la navigazione
 - form nuovo prodotto (GET create) (ricordarsi il token @csrf)
 - rotta per salvare i dati provenienti dal form create (POST store)
 - una volta salvati i dati reindirizzare alla show (return redirect()->route('mia_tabella.show', $new_elemento);)
+
+17.05.24
+giorno 2
+terminare la CRUD iniziata ieri aggiungendo le funzionalità di edit e delete.
