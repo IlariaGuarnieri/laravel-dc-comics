@@ -77,16 +77,20 @@ class ComicsController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
+        // qui salvo i dati nel $form_data
         $form_data = $request->all();
+        // qui aggiorno i dati nel database
         $comic->update($form_data);
+        //reindirizzo alla show
         return redirect()->route('comics.show', $comic);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Comic $comic)
     {
-        //
+        $comic->delete();
+        return redirect()->route('comics.index');
     }
 }

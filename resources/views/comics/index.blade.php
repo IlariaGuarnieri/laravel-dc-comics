@@ -16,7 +16,14 @@
                     <p class="card-text">TIPOLOGIA:{{$comic->type}}</p>
                     <p class="card-text">PREZZO:{{$comic->price}}</p>
                     <a href="{{route('comics.show', $comic)}}" class="btn btn-primary">Dettaglio prodotto</a>
+
+                    {{-- modifica --}}
                     <a href="{{ route('comics.edit', $comic) }}" class="btn btn-warning "><i class="fa-solid fa-pencil"></i></a>
+                    {{-- cancellazione --}}
+                    <form action="{{ route('comics.destroy', $comic) }}" method="POST">
+                        @csrf
+                  @method('DELETE')
+                  <button type="submit" class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
                 </div>
             </div>
 
