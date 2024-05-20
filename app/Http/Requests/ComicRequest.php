@@ -37,8 +37,8 @@ class ComicRequest extends FormRequest
     public function messages(){
         return[
             'title.required' => 'Il titolo è obbligatorio',
-            'title.min' => 'Il titolo deve contenere almeno 3 caratteri',
-            'title.max' => 'Il titolo deve contenere massimo 200 caratteri',
+            'title.min' => 'Il titolo deve contenere almeno :min caratteri',
+            'title.max' => 'Il titolo deve contenere massimo :max caratteri',
             'description.required'=> 'La descrizione è obbligatoria',
             'description.min' => 'La descrizione deve contenere almeno 3 caratteri',
             'description.max' => 'La descrizione deve contenere massimo 300 caratteri',
