@@ -39,7 +39,7 @@
 
 
         <div class="mb-3 mx-4">
-          <label for="thumb" class="form-label ">Immagine</label>
+          <label for="thumb" class="form-label ">Immagine(*)</label>
           <input type="text" name="thumb" id="thumb" class="form-control
 
           @error('thumb') is-invalid @enderror"
@@ -51,7 +51,7 @@
 
         </div>
         <div class="mb-3 mx-4">
-          <label for="price" class="form-label ">Prezzo</label>
+          <label for="price" class="form-label ">Prezzo(*)</label>
           <input type="text" name="price" id="price" class="form-control
 
           @error('price') is-invalid @enderror"
@@ -64,7 +64,7 @@
 
 
         <div class="mb-3 mx-4">
-          <label for="series" class="form-label ">Serie</label>
+          <label for="series" class="form-label ">Serie(*)</label>
           <input type="text" name="series" id="series" class="form-control
 
           @error('series') is-invalid @enderror"
@@ -87,7 +87,7 @@
 
 
         <div class="mb-3 mx-4">
-          <label for="type" class="form-label ">Tipo</label>
+          <label for="type" class="form-label ">Tipo(*)</label>
           <input type="text" name="type" id="type" class="form-control
 
           @error('type') is-invalid @enderror"
@@ -125,11 +125,25 @@
         </div>
 
 
-        <div class="mb-3 mx-4">
+        {{-- <div class="mb-3 mx-4">
           <label for="description" class="form-label ">Descrizione</label>
           <textarea name="description" id="description" class="form-control" >{{ old ('description') }}</textarea>
-        </div>
+        </div> --}}
+
+        <div class="mb-3 mx-4">
+            <label for="description" class="form-label">Descrizione</label>
+            <textarea name="description" id="description" class="form-control
+            @error('description') is-invalid
+            @enderror">{{ old('description') }}</textarea>
+
+            @error('description')
+              <small class="text-danger">{{ $message }}</small>
+            @enderror
+          </div>
+
+
         <button type="submit" class="btn btn-success mb-5 mx-4">Crea</button>
+
         <button type="reset" class="btn btn-danger mb-5">Cancella</button>
       </form>
     </div>
