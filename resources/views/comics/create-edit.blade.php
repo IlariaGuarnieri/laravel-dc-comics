@@ -24,9 +24,10 @@
     <div class="col">
 
 
-      <form action="{{ route('comics.store') }}" method="post">
+      <form action="{{ $route }}" method="post">
         {{-- nei form è importante mettere @csrf, importante per la vulnerabilità --}}
         @csrf
+        @method($method)
         <div class="mb-3 mx-4">
           <label for="title" class="form-label ">Titolo(*)</label>
           <input type="text" name="title" id="title" class="form-control @error('title') is-invalid @enderror"

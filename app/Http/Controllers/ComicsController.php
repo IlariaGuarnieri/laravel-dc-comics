@@ -24,8 +24,9 @@ class ComicsController extends Controller
      */
     public function create()
     {
-        //
-        return view('comics.create');
+        $method = 'POST';
+        $route = route('comics.store');
+        return view('comics.create-edit' , compact($method));
     }
 
     /**

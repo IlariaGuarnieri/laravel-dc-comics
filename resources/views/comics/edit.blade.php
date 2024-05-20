@@ -3,6 +3,18 @@
 @section('content')
 <div class="container mb-5 ">
     <h1>{{ $comic->title }}</h1>
+
+    {{-- trasportato da crete.blade.php --}}
+    @if ($errors->any())
+          <div class="alert alert-danger" role="alert">
+            <ul>
+              @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+              @endforeach
+            </ul>
+          </div>
+        @endif
+
     <div class="row">
       <div class="col">
         <h1 class="">Modifica Comic</h1>

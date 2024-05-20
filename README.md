@@ -1,4 +1,5 @@
 CRUD TODO LIST
+## giorno 1
 1. clonare il template
 2. creare la migration
 3. creare il model
@@ -15,5 +16,11 @@ Per la navigazione
 - una volta salvati i dati reindirizzare alla show (return redirect()->route('mia_tabella.show', $new_elemento);)
 
 17.05.24
-giorno 2
+## giorno 2
 terminare la CRUD iniziata ieri aggiungendo le funzionalità di edit e delete.
+
+20.05.23
+## giorno 3
+Terminare la CRUD Comics aggiungendo la validazione sia per il create che per l’edit.
+BONUS
+Create una sola view per i form di create ed edit
