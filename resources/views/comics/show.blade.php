@@ -14,8 +14,8 @@
                     class="fa-solid fa-pencil"></i></a>
 
                 <form action="{{ route('comics.destroy', $comic) }}" method="POST">
-                  @csrf
-                  @method('DELETE')
+                    @csrf
+                    @method('DELETE')
                   <button type="submit" class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
                 </form>
               </div>
@@ -24,6 +24,7 @@
             <p>SERIES:{{$comic->series}}</p>
             <p>DATA DI VENDITA:{{$comic->sale_date}}</p>
             <p>ATTORI:{{$comic->artists}}</p>
+            <p>PREZZO:{{$comic->price}}</p>
             <p>SCRITTORI:{{$comic->writers}}</p>
 
             @php
